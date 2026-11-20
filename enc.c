@@ -14,8 +14,8 @@ int encrypt(FILE *secretFile,FILE *encFile, FILE *keyFile ){
 }
 int main(int argc, char* argv[]){
     FILE *secretFile = fopen(argv[1], "r");
-    FILE *encFile = fopen("enc.out", "w");
-    FILE *keyFile = fopen("key.out", "w");
+    FILE *encFile = fopen(argv[2], "w");
+    FILE *keyFile = fopen(argv[3], "w");
     if (!secretFile) {
         printf("enter valid argument");
         exit(-1);
