@@ -14,3 +14,4 @@ then run it , put the encryptied file , the key file and the output you want to 
 ./dec secretfileenc secretfilekey secretfiledecrypted.txt
 ```
 and boom it works for some reason
+-- note: it is completely optional to provide output names , like you dont need to provide a key file name or encrypted file name when encrypting something and you dont need to provide outputted decrypted file name
