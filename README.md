@@ -1,4 +1,4 @@
-# encryptioninc
+# encryption in c
 this is my encryption/decryption program in c
 
 to use , make a text file , lets say you name it secretfile.txt
