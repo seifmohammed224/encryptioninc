@@ -1,17 +1,47 @@
-# encryption in c
-this is my encryption/decryption program in c
+# c file encryptor
 
-to use , make a text file , lets say you name it secretfile.txt
+a small file encryption/decryption program i made using c.
 
-you clone the repo , put the file next to the source code, then the name of the output encrypted file , then the name of the key for it and compile , after compiling you run
+## features
+- encrypt files using xor
+- decrypt files using a saved key
+- supports binary files
+- custom output filenames
+- default output filenames
 
-```./enc secretfile.txt secretfileenc secretfilekey```
-this will make 2 new files , an encrypted file and a key file
-now if you want to decrypt it , u compile dec.c
+## compile
 
-then run it , put the encryptied file , the key file and the output you want to name for example
+```bash
+gcc main.c -o crypt
 ```
-./dec secretfileenc secretfilekey secretfiledecrypted.txt
+
+## usage
+
+### encrypt
+
+```bash
+./crypt -e input.txt encrypted.bin key.bin
 ```
-and boom it works for some reason
--- note: it is completely optional to provide output names , like you dont need to provide a key file name or encrypted file name when encrypting something and you dont need to provide outputted decrypted file name
+
+you can also just use:
+
+```bash
+./crypt -e input.txt
+```
+
+default files will be `enc.out` and `key.out`.
+
+### decrypt
+
+```bash
+./crypt -d encrypted.bin key.bin output.txt
+```
+
+or:
+
+```bash
+./crypt -d encrypted.bin key.bin
+```
+
+the default output file is `dec.out`.
+
