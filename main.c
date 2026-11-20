@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int encrypt(FILE *secretFile, FILE *encFile, FILE *keyFile) {
     int c;
@@ -31,6 +32,8 @@ int decrypt(FILE *decFile, FILE *encFile, FILE *keyFile) {
 }
 
 int main(int argc, char *argv[]) {
+    
+    srand((unsigned int)time(NULL));
 
     if (argc < 2) {
         printf("missing mode argument\n");
