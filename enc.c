@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
     FILE *secretFile = fopen(argv[1], "r");
     FILE *encFile = fopen(argv[2], "w");
     FILE *keyFile = fopen(argv[3], "w");
-    if (!secretFile) {
+    if (!secretFile || !encFile || !keyFile) {
         printf("enter valid argument");
         exit(-1);
     }
