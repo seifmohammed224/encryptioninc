@@ -3,12 +3,14 @@ this is my encryption/decryption program in c
 
 to use , make a text file , lets say you name it secretfile.txt
 
-you clone the repo , put the file next to the source code, and compile , after compiling you run
+you clone the repo , put the file next to the source code, then the name of the output encrypted file , then the name of the key for it and compile , after compiling you run
 
-./enc secretfile.txt
-this will make 2 new files , one called enc.out and a key.out
-
+```./enc secretfile.txt secretfileenc secretfilekey```
+this will make 2 new files , an encrypted file and a key file
 now if you want to decrypt it , u compile dec.c
-then run ./dec enc.out key.out
 
+then run it , put the encryptied file , the key file and the output you want to name for example
+```
+./dec secretfileenc secretfilekey secretfiledecrypted.txt
+```
 and boom it works for some reason
